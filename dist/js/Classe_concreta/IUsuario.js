@@ -1,8 +1,6 @@
-
-export class IUsuario{
+export class IUsuario {
     //Método para validar interface.
-    public userInterface(){
+    userInterface() {
         return true;
     }
-
 }

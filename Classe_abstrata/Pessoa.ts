@@ -1,11 +1,10 @@
-import { Funcionario } from "../Classe_concreta/Funcionario";
 
 export class Pessoa{
 
     /*=============== VARIÁVEIS ===============*/
-    nome: string;
-    cpf: string;
-    telefone: string;
+    private nome: string;
+    private cpf: string;
+    private telefone: string;
 
 
     /*=============== CONSTRUCTOR DA CLASSE ===============*/
@@ -15,6 +14,43 @@ export class Pessoa{
         this.telefone = telefone;
 
     }
+
+    //Métodos set e get nome.
+
+    public set setNome(name : string) {
+        this.nome = name;
+    }
+
+    
+    public get getNome() : string {
+        return this.nome;
+    }
+    
+
+    //Métodos set e get CPF.
+    
+    public set setCPF(cpf : string) {
+        this.cpf = cpf;
+    }
+    
+    
+    public get getCPF() : string {
+        return this.cpf;
+    }
+    
+
+    //Métodos set e get Telefone
+    
+    public set setTelefone(telefone : string) {
+        this.telefone = telefone;
+    }
+    
+    
+    public get getTelefone() : string {
+        return this.telefone;
+    }
+    
+    
 
     
 }

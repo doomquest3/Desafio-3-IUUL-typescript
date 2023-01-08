@@ -1,22 +1,6 @@
-
-export class Endereco{
-
-    // Variáveis do endereço.
-    private cep: string; // identificador
-    private logradouro: string;
-    private numero: string;
-    private complemento: string;
-    private cidade: string;
-    private uf: string;
-    
+export class Endereco {
     /*=============== Constructor endereco ===============*/
-
-    constructor(cep: string,
-                logradouro: string,
-                numero: string,
-                complemento: string,
-                cidade: string,
-                uf: string){
+    constructor(cep, logradouro, numero, complemento, cidade, uf) {
         this.cep = cep;
         this.logradouro = logradouro;
         this.numero = numero;
@@ -24,90 +8,58 @@ export class Endereco{
         this.cidade = cidade;
         this.uf = uf;
     }
-
-    
     /*=============== CEP ===============*/
-
     //Método para adicionar CEP.
-    public set setCEP(cep : string) {
+    set setCEP(cep) {
         this.cep = cep;
-    
     }
-
     //Método recuperar CEP.
-    public get getCEP(){
+    get getCEP() {
         return this.cep;
-
     }
-
     /*=============== LOGRADOURO ===============*/
-
     //Método para adicionar logradouro.
-    public set setLogradouro(logradouro: string){
+    set setLogradouro(logradouro) {
         this.logradouro = logradouro;
-
     }
-
     //Método para recuperar logradouro.
-    public get getLogradouro(){
+    get getLogradouro() {
         return this.logradouro;
-
     }
-    
     /*=============== NÚMERO ===============*/
-
     //Método para adicionar número.
-    public set setNumero(numero: string){
+    set setNumero(numero) {
         this.numero = numero;
-
     }
-
     //Método para recuperar número.
-    public get getNumero(){
+    get getNumero() {
         return this.numero;
-
     }
-
     /*=============== COMPLEMENTO ===============*/
-
     //Método para adicionar complemento.
-    public set setComplemento(complemento: string){
+    set setComplemento(complemento) {
         this.complemento = complemento;
-
     }
-
     //Método para recuperar complemento.
-    public get getComplemento(){
+    get getComplemento() {
         return this.complemento;
-
     }
-
     /*=============== CIDADE ===============*/
-
     //Método para adicionar cidade.
-    public set setCidade(cidade: string){
+    set setCidade(cidade) {
         this.cidade = cidade;
-
     }
-
     //Método para recuperar cidade.
-    public get getCidade(){
+    get getCidade() {
         return this.cidade;
-
     }
-
     /*=============== UF ===============*/
-
     //Método para adicionar UF.
-    public set setUF(uf: string){
+    set setUF(uf) {
         this.uf = uf;
-
     }
-
     //Método para recuperar UF.
-    public get getUF(){
+    get getUF() {
         return this.uf;
-
     }
-
 }

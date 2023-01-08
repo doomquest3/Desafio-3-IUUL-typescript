@@ -1,30 +1,51 @@
+import { Pessoa } from "../Classe_abstrata/Pessoa";
 import { Endereco } from "./Endereco";
 import { IUsuario } from "./IUsuario";
 
-export class Cliente{
+export class Cliente extends Pessoa implements IUsuario{
     //Variável vip de clientes.
-    vip: boolean;
+    private endereco: Array<Endereco>;
+    private vip: boolean;
 
-    constructor(vip: boolean) {
+    constructor(nome:string,
+                cpf:string,
+                telefone: string,
+                endereco: Endereco,
+                vip: boolean
+                ) {
+                    
+        super(nome, cpf, telefone);
         this.vip = vip;
+        this.endereco = [];
+        this.endereco.push(endereco);
         
     }
 
+    //Método set e get - Cliente;
+
+    public set setCliente(v : boolean) {
+        this.vip = v;
+    }
+    
+    public get getCliente() : boolean {
+        return this.vip;
+    }
+
+    //Método para adicionar endereço
+    public addEndereco(endereco: Endereco): void{
+        this.endereco.push(endereco);
+    }
+    
     //Método listar endereços.
-    public listarEndereco(list_end: Endereco[]){
-        
-        for(let i =0; i<list_end.length; i++){
-            console.log(`Endereço número ${i}`);
-            console.log(`${list_end[i].cep}`);
-            console.log(`${list_end[i].logradouro}`);
-            console.log(`${list_end[i].numero}`);
-            console.log(`${list_end[i].complemento}`);
-            console.log(`${list_end[i].cidade}`);
-            console.log(`${list_end[i].uf}`);
-
-        }
+    public listarEndereco(): void{
+        this.endereco.forEach((element)=>{
+            console.log(element);
+        })
 
     }
-
-
+        
+    public userInterface(): boolean {
+        return true;
+    }
+    
 }
