@@ -15,12 +15,12 @@ const Roberto = new Cliente("Roberto Carlos",
                                         "SP"),
                            true);
 
-const contaRoberto = new ContaCorrente("1",new Debito(0),new Credito(0), 1000);
+const contaRoberto = new ContaCorrente("1",new Debito(0, new Date()), new Credito(0, new Date()), 1000);
 
-contaRoberto.depositar(new Credito(100));
-contaRoberto.depositar(new Credito(100));
-contaRoberto.depositar(new Credito(100));
+contaRoberto.depositar(new Credito(100, new Date()));
+contaRoberto.depositar(new Credito(100, new Date()));
+contaRoberto.depositar(new Credito(100, new Date()));
 
-contaRoberto.sacar(new Debito(0), contaRoberto.getLimite);
+contaRoberto.sacar(new Debito(0, new Date()), contaRoberto.getLimite);
 
 contaRoberto.calSaldo();

@@ -19,9 +19,9 @@ const Roberto = new Cliente("Roberto Carlos",
                                         "SP"),
                            true);
 
-const contaRoberto = new ContaCorrente("1",new Debito(0),new Credito(0), 1000);
+const contaRoberto = new ContaCorrente("1",new Debito(0, new Date()),new Credito(0, new Date()), 1000);
 
-contaRoberto.depositar(new Credito(1000));
+contaRoberto.depositar(new Credito(1000, new Date()));
 
 //Cliente - Juninho Batidão
 const Juninho = new Cliente("Juninho Batidão",
@@ -34,8 +34,8 @@ const Juninho = new Cliente("Juninho Batidão",
                                         "SP"),
                            true);
 
-const contaJuninho = new ContaPoupanca("1",new Debito(0),new Credito(0), 1000);
+const contaJuninho = new ContaPoupanca("1",new Debito(0, new Date()),new Credito(0, new Date()), 1000);
 
-contaJuninho.depositar(new Credito(1000));
+contaJuninho.depositar(new Credito(1000, new Date()));
 
 contaRoberto.transferir(contaJuninho, 500);

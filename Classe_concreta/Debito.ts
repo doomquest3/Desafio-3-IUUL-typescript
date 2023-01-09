@@ -4,9 +4,9 @@ export class Debito{
     private data: Date;
 
     //Constructor - Debito
-    constructor(valor: number) {
+    constructor(valor: number, data: Date) {
         this.valor = valor;
-        this.data = new Date();
+        this.data = data;
 
     }
 

@@ -29,14 +29,19 @@ export class ContaPoupanca extends Conta{
 
     //Calcular rendimento mensal.
     public calcularRendimento(){
+        var totalCredito: number;
+        var totalDebito: number;
+        
         if(this.creditoArray.length > this.debitoArray.length){
-            for(let i=0; i<this.creditoArray.length;i++){
 
-            }
-        }else{
-            for(let i=0; i<this.debitoArray.length;i++){
-
-            }
+            this.creditoArray.forEach(element =>{
+              totalCredito = element.getValor;
+              this.debitoArray.forEach(element =>{
+                totalDebito = element.getValor;
+              })
+              console.log(`O total de rendimento do dia ${element.getData} é: ${(totalCredito - totalDebito)*this.rentabilidademensal}`);
+            })
+        
         }
         
     }

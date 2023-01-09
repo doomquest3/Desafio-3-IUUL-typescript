@@ -31,11 +31,11 @@ export class ContaCorrente extends Conta {
     //Método para transferir dinheiro.
     public transferir(contaDestino: ContaPoupanca, valor: number){
         //Sacar dinheiro da conta
-        const debito = new Debito(valor);
+        const debito = new Debito(valor, new Date());
         this.sacar(debito, this.limite)
         
         //Enviar dinheiro
-        const credito = new Credito(valor);
+        const credito = new Credito(valor, new Date());
         contaDestino.depositar(credito);
 
     }
