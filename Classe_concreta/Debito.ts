@@ -1,7 +1,7 @@
 
 export class Debito{
-    valor: number;
-    data: Date;
+    private valor: number;
+    private data: Date;
 
     //Constructor - Debito
     constructor(valor: number) {
@@ -21,6 +21,12 @@ export class Debito{
         return this.valor;
 
     }
+
+    
+    public get getData() : Date {
+        return this.data;
+    }
+    
     
 
 }
